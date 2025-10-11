@@ -68,14 +68,14 @@ function Connection({ start, end, color }) {
 
 function Graph3D() {
     const colors = [
-        "#6d78ddff",
-        "#ff00ff",
-        "#7b2cbf",
-        "#00d9ff",
-        "#ff006e",
-        "#553c88ff",
-        "#06ffa5",
-        "#ff0b0bff",
+        "#bbbbc1ff",
+        "#922892ff",
+        "#a489bbff",
+        "#afb2b3ff",
+        "#d76d9bff",
+        "#b8b7b8ff",
+        "#b9bbbaff",
+        "#dcd6ddff",
     ]
     
     const nodes = useMemo(() => {
