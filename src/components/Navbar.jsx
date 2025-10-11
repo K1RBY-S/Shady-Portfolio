@@ -13,7 +13,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:justify-evenly">
         <a
           href="#Home"
-          className="bg-gradient-to-r from-yellow-500 to-yellow-500 bg-clip-text text-transparent opacity-80 text-2xl md:text-3xl font-semibold transition-opacity duration-300 hover:opacity-100"
+          className="bg-gradient-to-r from-[#ffffff] to-[#ffffff] bg-clip-text text-transparent opacity-80 text-2xl md:text-3xl font-semibold transition-opacity duration-300 hover:opacity-100"
         >
           Shady Dajani
         </a>
@@ -29,7 +29,7 @@ export default function Navbar() {
         {/* desktop socials */}
         <ul className="hidden md:flex gap-5">
           <li>
-            <a href="https://www.linkedin.com/in/shady-h-dajani-"
+            <a href="www.linkedin.com/in/shady-h-dajani-"
                target="_blank" rel="noopener noreferrer"
                className="opacity-70 transition-all duration-300 hover:text-blue-300 hover:opacity-100">
               <BsLinkedin />
