@@ -31,7 +31,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
         className="text-xl text-white md:text-2xl text-pretty">
-          Passionate about transforming data into actionable insights. Skilled in Python, SQL, and data visualization tools. Eager to contribute to data-driven decision-making and continuous learning.
+          Aspiring Data Scientist passionate about transforming data into insights. Skilled in SQL, Python, and analytical frameworks, with internship experience at Kaiser Permanente. I thrive in challenging environments, excel at collaborative problem-solving, and bring innovative thinking to improve reporting processes and exceed performance goals.
         </motion.p>
       </div>
     </section>
