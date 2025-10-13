@@ -36,8 +36,7 @@ const Projects = () => {
         variants={variants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, delay: 0.1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
         className="text-4xl font-semibold text-white md:text-6xl"
       >
         Projects
