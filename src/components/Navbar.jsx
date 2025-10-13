@@ -69,7 +69,7 @@ export default function Navbar() {
             <a href="#Contact" onClick={close} className="opacity-80 hover:opacity-100">Contact</a>
 
             <div className="flex gap-5 pt-2">
-              <a href="https://www.linkedin.com/in/shady-h-dajani-/"
+              <a href="https://www.linkedin.com/in/shady-h-dajani-"
                  target="_blank" rel="noopener noreferrer"
                  className="opacity-70 transition-all duration-300 hover:text-blue-300 hover:opacity-100">
                 <BsLinkedin />
