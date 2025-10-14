@@ -167,7 +167,7 @@ export default function Graph() {
                 style={{ width: "100%", height: "100%" }}
             >
                 <color attach="background" args={["#723D46"]} />
-                <fog attach="fog" args={["#00ebb4ff", 8, 25]} />
+                <fog attach="fog" args={["#723D46", 8, 25]} />
                 
                 <ambientLight intensity={0.5} />
                 <pointLight position={[10, 10, 10]} intensity={1} color="#00f5ff" />
