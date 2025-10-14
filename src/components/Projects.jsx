@@ -1,10 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-// ⬇️ Import your PDFs from src/assets
-// (Adjust the relative paths to match your folder structure)
+// PDFs in src/assets
 import googleDA from '../assets/GoogleDataAnalytics.pdf'
-import courseraCert from '../assets/Coursera-Cert.pdf' // consider renaming to coursera-cert.pdf
+import courseraCert from '../assets/Coursera-Cert.pdf'
 
 const Projects = () => {
   const variants = {
@@ -12,20 +11,27 @@ const Projects = () => {
     visible: { opacity: 1, y: 0 }
   }
 
-  const projects = [
-    {
-      title: 'Google Data Analytics Certificate',
-      desc: 'Professional certificate covering spreadsheets, SQL, R, Tableau, and full analytics workflow.',
-      file: googleDA,
-      tag: 'Certificate'
-    },
-    {
-      title: 'Coursera Certificate',
-      desc: '8-course sequence with hands-on, practice-based assessments in data analytics.',
-      file: courseraCert,
-      tag: 'Certificate'
-    }
-  ]
+  // One combined project with multiple certs
+  const certificates = {
+    title: 'Certificates',
+    desc:
+      'Professional credentials demonstrating foundational analytics skills and hands-on, practice-based assessments.',
+    tag: 'Credentials',
+    items: [
+      {
+        name: 'Google Data Analytics Certificate',
+        file: googleDA,
+        blurb:
+          'Covers spreadsheets, SQL, R, Tableau, and the full analytics workflow.'
+      },
+      {
+        name: 'Coursera Certificate',
+        file: courseraCert,
+        blurb:
+          '8-course sequence with applied projects in data analysis and reporting.'
+      }
+    ]
+  }
 
   return (
     <div
@@ -42,42 +48,52 @@ const Projects = () => {
         Projects
       </motion.h1>
 
-      <div className="grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-2">
-        {projects.map((p, i) => (
-          <motion.div
-            key={p.title}
-            variants={variants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
-            className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm shadow-lg"
-          >
-            <div className="mb-3 inline-flex items-center rounded-full border border-white/10 px-3 py-1 text-xs tracking-wide text-white/70">
-              {p.tag}
-            </div>
-            <h3 className="text-xl font-semibold text-white">{p.title}</h3>
-            <p className="mt-2 text-sm leading-6 text-white/80">{p.desc}</p>
+      <div className="grid w-full max-w-6xl grid-cols-1 gap-6">
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm shadow-lg"
+        >
+          <div className="mb-3 inline-flex items-center rounded-full border border-white/10 px-3 py-1 text-xs tracking-wide text-white/70">
+            {certificates.tag}
+          </div>
 
-            <div className="mt-5 flex gap-3">
-              <a
-                href={p.file}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl bg-white/90 px-4 py-2 text-sm font-medium text-black transition hover:bg-white"
+          <h3 className="text-2xl font-semibold text-white">{certificates.title}</h3>
+          <p className="mt-2 text-sm leading-6 text-white/80">{certificates.desc}</p>
+
+          <div className="mt-6 space-y-5">
+            {certificates.items.map((c) => (
+              <div
+                key={c.name}
+                className="rounded-xl border border-white/10 bg-black/20 p-4"
               >
-                View PDF
-              </a>
-              <a
-                href={p.file}
-                download
-                className="rounded-xl border border-white/30 px-4 py-2 text-sm font-medium text-white/90 transition hover:bg-white/10"
-              >
-                Download
-              </a>
-            </div>
-          </motion.div>
-        ))}
+                <h4 className="text-lg font-medium text-white">{c.name}</h4>
+                <p className="mt-1 text-sm text-white/75">{c.blurb}</p>
+
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <a
+                    href={c.file}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-xl bg-white/90 px-4 py-2 text-sm font-medium text-black transition hover:bg-white"
+                  >
+                    View PDF
+                  </a>
+                  <a
+                    href={c.file}
+                    download
+                    className="rounded-xl border border-white/30 px-4 py-2 text-sm font-medium text-white/90 transition hover:bg-white/10"
+                  >
+                    Download
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   )
