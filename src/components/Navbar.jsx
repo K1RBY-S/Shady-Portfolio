@@ -29,17 +29,17 @@ export default function Navbar() {
         {/* desktop socials */}
         <ul className="hidden md:flex gap-5">
           <li>
-            <a href="www.linkedin.com/in/shady-h-dajani-"
+            <a href="https://www.linkedin.com/in/shady-h-dajani-"
                target="_blank" rel="noopener noreferrer"
                className="opacity-70 transition-all duration-300 hover:text-blue-300 hover:opacity-100">
-              <BsLinkedin />
+              <BsLinkedin size={22} />
             </a>
           </li>
           <li>
             <a href="https://github.com/K1RBY-S"
                target="_blank" rel="noopener noreferrer"
                className="opacity-70 transition-all duration-300 hover:text-purple-300 hover:opacity-100">
-              <BsGithub />
+              <BsGithub size={22} />
             </a>
           </li>
         </ul>
@@ -71,13 +71,13 @@ export default function Navbar() {
             <div className="flex gap-5 pt-2">
               <a href="https://www.linkedin.com/in/shady-h-dajani-"
                  target="_blank" rel="noopener noreferrer"
-                 className="opacity-70 transition-all duration-300 hover:text-blue-300 hover:opacity-100">
-                <BsLinkedin />
+                 className="opacity-80 transition-all duration-300 hover:text-blue-300 hover:opacity-100">
+                <BsLinkedin size={20} />
               </a>
               <a href="https://github.com/K1RBY-S"
                  target="_blank" rel="noopener noreferrer"
-                 className="opacity-70 transition-all duration-300 hover:text-purple-300 hover:opacity-100">
-                <BsGithub />
+                 className="opacity-80 transition-all duration-300 hover:text-purple-300 hover:opacity-100">
+                <BsGithub size={20} />
               </a>
             </div>
           </div>
