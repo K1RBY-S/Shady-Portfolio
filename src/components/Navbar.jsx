@@ -89,8 +89,10 @@ export default function Navbar() {
             <div className="flex gap-5 pt-2">
               <a
                 href="https://www.linkedin.com/in/shady-h-dajani-"
+                onClick={openLinkedIn}
                 target="_blank" rel="noopener noreferrer"
                 className="opacity-80 transition-all duration-300 hover:text-blue-300 hover:opacity-100"
+                aria-label="Open LinkedIn profile"
               >
                 <BsLinkedin size={20} />
               </a>

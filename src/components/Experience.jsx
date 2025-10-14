@@ -32,10 +32,10 @@ export default function Experience() {
 </p>
 
         <ul className="mt-3 list-disc pl-5 space-y-2">
-          <li>Validates data utilizing queries in SQL (Oracle and Databricks)</li>
-            <li>Collaborated in web scraping data to create site automation and documented the process</li>
-            <li>Manages and validates data in excel while making use of intermediate functions such as XLOOKUP</li>
-            <li>Performs analysis, testing and interpretation of processes and data to provide insights to support Kaiser’s objectives</li>
+          <li>Validated data utilizing queries in SQL (Oracle and Databricks)</li>
+            <li>Collaborated in web scraping data to create web automation and documented the process</li>
+            <li>Managed and validated data in excel while making use of intermediate level functions such as XLOOKUP</li>
+            <li>Performed analysis, testing and interpretation of processes and data to provide insights to support Kaiser’s objectives</li>
             <li>Presented findings to senior management, influencing data-driven decisions</li>
         </ul>
       </motion.div>
