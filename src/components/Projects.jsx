@@ -127,12 +127,12 @@ const Projects = () => {
 
           {/* Live iframe preview */}
           <div className="mt-5 w-full overflow-hidden rounded-xl border border-white/10 bg-black/40">
-  <iframe
-    src={heatmapUrl}
-    title="Strava Activity Histogram"
-    className="h-[420px] w-full border-0"
-  />
-</div>
+ <iframe
+  src="https://k1rby-s.github.io/strava-heatmap-postman-visualization/heatmap.html"
+  title="Strava Heatmap"
+  className="w-full h-[500px] border-0 rounded-xl"
+></iframe>
+
 
 <div className="mt-4 flex flex-wrap gap-3">
   <a
