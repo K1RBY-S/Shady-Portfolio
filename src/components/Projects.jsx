@@ -11,7 +11,7 @@ const Projects = () => {
     visible: { opacity: 1, y: 0 }
   }
 
-  // One combined project with multiple certs
+  // Certificates data
   const certificates = {
     title: 'Certificates',
     desc:
@@ -33,6 +33,10 @@ const Projects = () => {
     ]
   }
 
+  // Heatmap visualization project
+  const heatmapUrl =
+  "https://k1rby-s.github.io/strava-heatmap-postman-visualization/heatmap.html";
+
   return (
     <div
       id="Projects"
@@ -49,6 +53,7 @@ const Projects = () => {
       </motion.h1>
 
       <div className="grid w-full max-w-6xl grid-cols-1 gap-6">
+        {/* Certificates Card */}
         <motion.div
           variants={variants}
           initial="hidden"
@@ -61,8 +66,12 @@ const Projects = () => {
             {certificates.tag}
           </div>
 
-          <h3 className="text-2xl font-semibold text-white">{certificates.title}</h3>
-          <p className="mt-2 text-sm leading-6 text-white/80">{certificates.desc}</p>
+          <h3 className="text-2xl font-semibold text-white">
+            {certificates.title}
+          </h3>
+          <p className="mt-2 text-sm leading-6 text-white/80">
+            {certificates.desc}
+          </p>
 
           <div className="mt-6 space-y-5">
             {certificates.items.map((c) => (
@@ -93,6 +102,49 @@ const Projects = () => {
               </div>
             ))}
           </div>
+        </motion.div>
+
+        {/* Heatmap Project Card */}
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm shadow-lg"
+        >
+          <div className="mb-3 inline-flex items-center rounded-full border border-white/10 px-3 py-1 text-xs tracking-wide text-white/70">
+            Data Visualization
+          </div>
+
+          <h3 className="text-2xl font-semibold text-white">
+            Strava Activity Histogram
+          </h3>
+          <p className="mt-2 text-sm leading-6 text-white/80">
+            Interactive Postman visualization using Strava API to pull data and
+            render a custom histogram for runs, rides, and walks.
+          </p>
+
+          {/* Live iframe preview */}
+          <div className="mt-5 w-full overflow-hidden rounded-xl border border-white/10 bg-black/40">
+  <iframe
+    src={heatmapUrl}
+    title="Strava Activity Histogram"
+    className="h-[420px] w-full border-0"
+  />
+</div>
+
+<div className="mt-4 flex flex-wrap gap-3">
+  <a
+    href={heatmapUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-xl bg-white/90 px-4 py-2 text-sm font-medium text-black transition hover:bg-white"
+  >
+    Open Fullscreen
+  </a>
+</div>
+
         </motion.div>
       </div>
     </div>
