@@ -95,47 +95,46 @@ const Projects = () => {
         </motion.div>
 
         {/* Heatmap Project Card */}
-        <motion.div
-          variants={variants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm shadow-lg"
-        >
-          <div className="mb-3 inline-flex items-center rounded-full border border-white/10 px-3 py-1 text-xs tracking-wide text-white/70">
-            Data Visualization
-          </div>
+<motion.div
+  variants={variants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.6, delay: 0.2 }}
+  className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm shadow-lg"
+>
+  <div className="mb-3 inline-flex items-center rounded-full border border-white/10 px-3 py-1 text-xs tracking-wide text-white/70">
+    Data Visualization
+  </div>
 
-          <h3 className="text-2xl font-semibold text-white">Strava Activity Histogram</h3>
-          <p className="mt-2 text-sm leading-6 text-white/80">
-            Interactive Postman visualization using exported Strava data and Chart.js.
-          </p>
+  <h3 className="text-2xl font-semibold text-white">
+    Strava Activity Histogram
+  </h3>
 
-          <div className="mt-5 w-full overflow-hidden rounded-xl border border-white/10 bg-black/40">
-            <iframe
-              src={heatmapUrl}
-              title="Strava Heatmap"
-              className="w-full h-[500px] border-0 rounded-xl"
-            />
-          </div>
+  <p className="mt-2 text-sm leading-6 text-white/80">
+    Interactive Postman visualization using Strava API to pull data and
+    render a custom histogram for runs, rides, and walks.
+  </p>
 
-          <div className="mt-4">
-            <a
-              href={heatmapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl bg-white/90 px-4 py-2 text-sm font-medium text-black transition hover:bg-white"
-            >
-              Open Fullscreen
-            </a>
-          </div>
+  {/* Wrapper for iframe */}
+  <div className="mt-5 w-full overflow-hidden rounded-xl border border-white/10 bg-black/40">
+    <iframe
+      src="https://k1rby-s.github.io/strava-heatmap-postman-visualization/heatmap.html"
+      title="Strava Heatmap"
+      className="w-full h-[600px] border-0 rounded-xl"
+    />
+  </div>
 
-        </motion.div>
-
-      </div>
-    </div>
-  )
-}
+  <div className="mt-4 flex flex-wrap gap-3">
+    <a
+      href={heatmapUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-xl bg-white/90 px-4 py-2 text-sm font-medium text-black transition hover:bg-white"
+    >
+      Open Fullscreen
+    </a>
+  </div>
+</motion.div>
 
 export default Projects
