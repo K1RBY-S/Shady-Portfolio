@@ -11,6 +11,7 @@ const Projects = () => {
     visible: { opacity: 1, y: 0 }
   }
 
+  // Certificates data
   const certificates = {
     title: 'Certificates',
     desc:
@@ -20,18 +21,21 @@ const Projects = () => {
       {
         name: 'Google Data Analytics Certificate',
         file: googleDA,
-        blurb: 'Covers spreadsheets, SQL, R, Tableau, and the full analytics workflow.'
+        blurb:
+          'Covers spreadsheets, SQL, R, Tableau, and the full analytics workflow.'
       },
       {
         name: 'Coursera Certificate',
         file: courseraCert,
-        blurb: '8-course sequence with applied projects in data analysis and reporting.'
+        blurb:
+          '8-course sequence with applied projects in data analysis and reporting.'
       }
     ]
   }
 
+  // Strava heatmap URL (hosted on a separate repo)
   const heatmapUrl =
-    "https://k1rby-s.github.io/strava-heatmap-postman-visualization/heatmap.html"
+    'https://k1rby-s.github.io/strava-heatmap-postman-visualization/heatmap.html'
 
   return (
     <div
@@ -49,7 +53,6 @@ const Projects = () => {
       </motion.h1>
 
       <div className="grid w-full max-w-6xl grid-cols-1 gap-6">
-        
         {/* Certificates Card */}
         <motion.div
           variants={variants}
@@ -63,12 +66,19 @@ const Projects = () => {
             {certificates.tag}
           </div>
 
-          <h3 className="text-2xl font-semibold text-white">{certificates.title}</h3>
-          <p className="mt-2 text-sm leading-6 text-white/80">{certificates.desc}</p>
+          <h3 className="text-2xl font-semibold text-white">
+            {certificates.title}
+          </h3>
+          <p className="mt-2 text-sm leading-6 text-white/80">
+            {certificates.desc}
+          </p>
 
           <div className="mt-6 space-y-5">
             {certificates.items.map((c) => (
-              <div key={c.name} className="rounded-xl border border-white/10 bg-black/20 p-4">
+              <div
+                key={c.name}
+                className="rounded-xl border border-white/10 bg-black/20 p-4"
+              >
                 <h4 className="text-lg font-medium text-white">{c.name}</h4>
                 <p className="mt-1 text-sm text-white/75">{c.blurb}</p>
 
@@ -116,15 +126,16 @@ const Projects = () => {
     render a custom histogram for runs, rides, and walks.
   </p>
 
-  {/* Wrapper for iframe */}
+  {/* iframe wrapper */}
   <div className="mt-5 w-full overflow-hidden rounded-xl border border-white/10 bg-black/40">
     <iframe
-      src="https://k1rby-s.github.io/strava-heatmap-postman-visualization/heatmap.html"
+      src={heatmapUrl}
       title="Strava Heatmap"
-      className="w-full h-[600px] border-0 rounded-xl"
-    />
+      className="w-full h-[500px] border-0 rounded-xl"
+    ></iframe>
   </div>
 
+  {/* Open fullscreen button */}
   <div className="mt-4 flex flex-wrap gap-3">
     <a
       href={heatmapUrl}
@@ -136,5 +147,10 @@ const Projects = () => {
     </a>
   </div>
 </motion.div>
+
+      </div>
+    </div>
+  )
+}
 
 export default Projects
