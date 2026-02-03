@@ -1,0 +1,7 @@
+import pandas as pd
+
+#reading the CSV file
+df = pd.read_csv("fast_food.csv")
+print(df.tail)
+
+

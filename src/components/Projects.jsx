@@ -15,14 +15,14 @@ const Projects = () => {
   const certificates = {
     title: 'Certificates',
     desc:
-      'Professional credentials demonstrating foundational analytics skills and hands-on, practice-based assessments.',
+      'Professional credentials demonstrating foundational analytical skills and applied data-driven decision-making frameworks to real-world business case studies while strengthened understanding of data ethics, visualization principles and analytical storytelling to support business strategies.',
     tag: 'Credentials',
     items: [
       {
         name: 'Google Data Analytics Certificate',
         file: googleDA,
         blurb:
-          'Covers spreadsheets, SQL, R, Tableau, and the full analytics workflow.'
+          'Covers spreadsheets, SQL, Python, Tableau, and the full analytics workflow.'
       },
       {
         name: 'Coursera Certificate',
@@ -35,7 +35,8 @@ const Projects = () => {
 
   // Strava heatmap URL (hosted on a separate repo)
   const heatmapUrl =
-    'https://k1rby-s.github.io/strava-heatmap-postman-visualization/heatmap.html'
+  'https://k1rby-s.github.io/strava-heatmap-postman-visualization/heatmap.html';
+
 
   return (
     <div
@@ -104,7 +105,7 @@ const Projects = () => {
           </div>
         </motion.div>
 
-        {/* Heatmap Project Card */}
+        {/* Heatmap Project Card */ }
 <motion.div
   variants={variants}
   initial="hidden"
@@ -118,24 +119,25 @@ const Projects = () => {
   </div>
 
   <h3 className="text-2xl font-semibold text-white">
-    Strava Activity Histogram
+    Interactive Strava API Histogram
   </h3>
-
-  <p className="mt-2 text-sm leading-6 text-white/80">
-    Interactive Postman visualization using Strava API to pull data and
-    render a custom histogram for runs, rides, and walks.
+  <p className="mt-2 text-md leading-6 text-white/80">
+    Visualization using Strava API to render a custom histogram for runs, bike rides, and walks. The data in this visulaization shows an increase in workout duration in months 10-11 but also consistent training frequency across months suggesting a structured routine. 
   </p>
-
+  <p className="mt-2 text-md leading-6 text-white/80">
+   Operated Strava API with Postman to get access to workout activity records, including run, bike, and walk metrics. Managed authentication/refresh tokens and processed raw JSON data into a structured dataset for analysis. Then I built an interactive histogram visualization showcasing 
+trend analysis of elapsed time for workout by date.
+  </p>
+  
   {/* iframe wrapper */}
   <div className="mt-5 w-full overflow-hidden rounded-xl border border-white/10 bg-black/40">
     <iframe
       src={heatmapUrl}
       title="Strava Heatmap"
       className="w-full h-[500px] border-0 rounded-xl"
-    ></iframe>
+    />
   </div>
 
-  {/* Open fullscreen button */}
   <div className="mt-4 flex flex-wrap gap-3">
     <a
       href={heatmapUrl}
@@ -147,6 +149,7 @@ const Projects = () => {
     </a>
   </div>
 </motion.div>
+
 
       </div>
     </div>

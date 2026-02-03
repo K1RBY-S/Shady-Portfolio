@@ -24,14 +24,14 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
         
-        className="text-2xl font-semibold text-white md:text-4xl">Data Analyst</motion.h3>
+        className="text-2xl font-semibold text-white md:text-4xl">Analyst</motion.h3>
         
         <motion.p
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
         className="text-xl text-white md:text-2xl text-pretty">
-          Aspiring Data Scientist passionate about transforming data into insights. Skilled in SQL, Python, and analytical frameworks, with internship experience at Kaiser Permanente. I thrive in challenging environments, excel at collaborative problem-solving, and bring innovative thinking to improve reporting processes and exceed performance goals.
+           Analyst with four years of analytical experience and continually looking to advance my professional skills and career. I've had the opportunity to work for companies like Kaiser Permanente where I managed multiple projects utilizing softwares and tools like Python, SQL, Microsoft (Excel & Word) and more. I am adapt at developing cross-functional relationships with people in different departments while supporting project goals and objectives.
         </motion.p>
       </div>
     </section>
