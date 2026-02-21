@@ -24,6 +24,3 @@ https://k1rby-s.github.io/Shady-Portfolio/
 - Clean project structure and version control
 - Ability to communicate technical work clearly
 
----
-
-Built and maintained by **Shady**
