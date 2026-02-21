@@ -10,6 +10,8 @@ https://k1rby-s.github.io/Shady-Portfolio/
   API-driven workout analysis using Postman, Chart.js, and GitHub Pages  
 - **Health & Lifestyle Classification Project**  
   Exploratory analysis of behavioral health factors using Python and machine learning models
+- **Google Analytics Certificate**
+  Applied data-driven decision-making frameworks to real-world business case studies
 
 #Tech Stack
 - React
@@ -19,7 +21,6 @@ https://k1rby-s.github.io/Shady-Portfolio/
 - GitHub Pages
 
 # What This Shows
-- Front-end development with modern tooling
 - Data driven visualization
 - Clean project structure and version control
 - Ability to communicate technical work clearly
