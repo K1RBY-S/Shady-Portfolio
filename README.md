@@ -13,7 +13,7 @@ https://k1rby-s.github.io/Shady-Portfolio/
 - **Google Analytics Certificate**
   Applied data-driven decision-making frameworks to real-world business case studies
 
-#Tech Stack
+Tech Stack
 - React
 - Vite
 - JavaScript
