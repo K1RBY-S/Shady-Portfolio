@@ -31,7 +31,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
         className="text-xl text-white md:text-2xl text-pretty">
-           Analyst with four years of experience who is continually looking to advance my professional skills and career. I've had the opportunity to work for companies like Kaiser Permanente where I managed multiple projects utilizing softwares and tools like Python, SQL, Microsoft (Excel & Word) and more. I am adept at developing cross-functional relationships with others in different departments while supporting project goals and objectives.
+           Analyst with four years of experience who is continually looking to advance my professional skills and career. I am a graduate from California State University Northridge and I've had the privilege to work for companies like Kaiser Permanente. I have managed multiple projects where I utilized softwares and tools like SQL, Microsoft Office, Tableau, Python and more. I am adept at developing cross-functional relationships with others  while supporting project goals and objectives.
         </motion.p>
       </div>
     </section>

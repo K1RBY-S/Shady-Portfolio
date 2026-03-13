@@ -16,6 +16,9 @@ import modelComparisonImg from '../assets/health-model-comparison.png'
 
 import reportCover from '../assets/health-report-cover.png'
 
+// dahsboard image
+import airbnbDashboardImg from '../assets/Airbnb-dashboard.jpg'
+
 const Projects = () => {
   const variants = {
     hidden: { opacity: 0, y: 50 },
@@ -27,23 +30,17 @@ const Projects = () => {
     title: 'Certificates',
     desc:
       'Professional credentials demonstrating foundational analytical skills and applied data-driven decision-making frameworks to real-world business case studies while strengthened understanding of data ethics, visualization principles and analytical storytelling to support business strategies.',
-    tag: 'Credentials',
+    tag: 'Extra Credentials',
     items: [
       {
         name: 'Google Data Analytics Certificate',
-        file: googleDA,
-        blurb:
-          'Covers spreadsheets, SQL, Python, Tableau, and the full analytics workflow.'
-      },
-      {
-        name: 'Coursera Certificate',
         file: courseraCert,
         blurb: '8-course sequence with applied projects in data analysis and reporting.'
       }
     ]
   }
 
-  // Strava heatmap URL (hosted on a separate repo)
+  // Strava heatmap (hosted on a separate repo)
   const heatmapUrl =
     'https://k1rby-s.github.io/strava-heatmap-postman-visualization/heatmap.html'
 
@@ -62,10 +59,36 @@ const Projects = () => {
         Projects
       </motion.h1>
 
-      <div className="grid w-full max-w-6xl grid-cols-1 gap-6">
-        {/* =========================
-            1) HEALTH PROJECT (TOP)
-           ========================= */}
+       <div className="grid w-full max-w-6xl grid-cols-1 gap-6">
+
+        {/* Airbnb Market Dashboard */}
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm shadow-lg"
+        >
+          <div className="mb-3 inline-flex items-center rounded-full border border-white/10 px-3 py-1 text-xs tracking-wide text-white/70">
+            Data Visualization
+         </div>
+
+          <h3 className="text-2xl font-semibold text-white">
+            Airbnb Market Dashboard
+          </h3>
+          <p className="mt-2 text-md leading-6 text-white/80">
+            Dashboard analyzing Airbnb market trends across the state of Washington. The dashboard features key metrics such as price distribution by zip code, geographic pricing patterns, revenue trends over time and average price by property size.
+          </p>
+          {/* Dashboard Image */}
+          <img
+            src={airbnbDashboardImg}
+            alt="Airbnb Market Dashboard"
+            className="mt-4 w-full rounded-lg border border-white/10"
+          />
+        </motion.div>
+
+        {/* HEALTH PROJECT */}
         <motion.div
           variants={variants}
           initial="hidden"
@@ -184,9 +207,7 @@ const Projects = () => {
 
         </motion.div>
 
-        {/* =========================
-            2) HEATMAP PROJECT (MIDDLE)
-           ========================= */}
+        {/* HEATMAP PROJECT */}
         <motion.div
           variants={variants}
           initial="hidden"
@@ -238,9 +259,7 @@ const Projects = () => {
           </div>
         </motion.div>
 
-        {/* =========================
-            3) CERTIFICATES (BOTTOM)
-           ========================= */}
+        {/* CERTIFICATE */}
         <motion.div
           variants={variants}
           initial="hidden"

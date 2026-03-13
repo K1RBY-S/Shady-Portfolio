@@ -33,10 +33,14 @@ export default function Experience() {
         </p>
 
         <ul className="mt-3 list-disc pl-5 space-y-2">
-          <li>Conducted data extraction, manipulation, and reporting using SQL (Oracle & Databricks) to create queries generate insights and improve data quality.</li>
-          <li>Collaborated on a Python web-automation for logins to future Kaiser projects and documented end-to-end workflow for technical and non-technical users.</li>
-          <li>Utilized Excel functions such as XLOOKUP to streamline validation and management of historical datasets and surface trends.</li>
-          <li>Built cross-functional relationships and communicated progress, deadlines, and blockers to senior management.</li>
+          <li>Utilized SQL (e.g. JOINs, CTEs, aggregations, filtering) to build queries supporting data extraction and 
+              transformation within ETL workflows.</li>
+          <li>Leveraged Excel (e.g. XLOOKUP, Pivot Tables, conditional formatting) to identify trends and validated historical 
+              datasets with 10,000+ records for trend forecasting.</li>
+          <li>Collaborated on a Python-based automation process to clean and transform data.</li>
+          <li>Documented the workflow of automation projects for technical and non-technical stakeholders. </li>
+          <li>Built cross-functional relationships and showed initiative in understanding project requirements, scheduling 
+              meetings and communicating findings to management. </li>
         </ul>
       </motion.div>
 
@@ -57,7 +61,26 @@ export default function Experience() {
           <li>Advised customers on skate/surf/snow gear, matching specs and fit to rider experience.</li>
           <li>Processed POS transactions, returns, inventory checks and assisted with stockroom organization and daily merchandising resets.</li>
           <li>Created small product displays that highlighted seasonal promos and contributed to a lift in snow sales.</li>
-          <li>Captured customer feedback and recurring issues, sharing notes with the team to improve sizing guidance and product recommendations.</li>
+          <li>Built long-term customer relationships contributing to repeated business. </li>
+        </ul>
+      </motion.div>
+      {/* NARC */}
+      <motion.div
+        variants={item}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="w-full max-w-3xl rounded-2xl border border-white/10 bg-white/5 p-6 text-white/85"
+      >
+        <p className="font-bold text-white">
+          <span className="font-extrabold text-white">Founder - NotaRunClub</span> - (July 2024 - November 2024)
+        </p>
+
+        <ul className="mt-3 list-disc pl-5 space-y-2">
+          <li>Organized weekly community runs and lifts that brought together participants from across Southern California.</li>
+          <li>Promoted upcoming events through digital fliers and outreach to attract a more diverse group of participants. </li>
+          <li>Partnered with a local gym contributing to increased gym membership signups and club participation.</li>
         </ul>
       </motion.div>
     </div>
